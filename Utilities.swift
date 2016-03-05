@@ -1,3 +1,10 @@
+/**
+* 
+* Usefull extensions for every Swift based Project ;)
+*
+*/
+
+// Loads NIB xib for UIView
 extension UIView {
     class func fromNib<T : UIView>(nibNameOrNil: String? = nil) -> T {
         let v: T? = fromNib(nibNameOrNil)
@@ -20,5 +27,19 @@ extension UIView {
             }
         }
         return view
+    }
+}
+
+extension String {
+    var length: Int {
+        get {
+            return self.characters.count
+        }
+    }
+}
+
+extension Double {
+    func toFormatedStr() -> String {
+        return NSString(format: "%.1f", self) as String
     }
 }
